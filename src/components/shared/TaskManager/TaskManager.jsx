@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Row, Col} from 'reactstrap';
 import TaskForm from './TaskForm/TaskForm.jsx';
 import TaskList from './TaskList/TaskList.jsx';
 import Task from '../../../models/Task';
+import {tasksAll} from '../../../constants';
 
 function TaskManager() {
-    const tasks = [new Task(1, 'Learn ReactJS'),
-                new Task(2, 'Learn Components'),
-                new Task(3, 'Learn Props'),
-                new Task(4, 'Learn Saga'),
-                new Task(5, 'Learn Redux')]
+
+    const [tasks, setTasks] = useState([]);
+
 
     const addTask = (data) => {
+        const task = new Task(
+            tasks.length + 1,
+            data.title,
+            data.description
+        )
+
+        setTasks([...tasks, task])
         console.log(data)
     }
 
