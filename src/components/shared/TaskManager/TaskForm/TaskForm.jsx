@@ -1,6 +1,7 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import { connect } from "react-redux";
 import {Form, FormGroup, Input, Label, Button} from 'reactstrap';
-
+import {addTaskAction} from "../../../../actions/taskActions.js";
 class TaskForm extends Component{
     state = {
         title : '',
@@ -76,4 +77,12 @@ class TaskForm extends Component{
     }
 }
 
-export default TaskForm
+const mapDispatchToProps = (dispatch) => { //store.dispatch
+    return {
+        addTask: (data) => {
+            dispatch(addTaskAction(data))
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(TaskForm)

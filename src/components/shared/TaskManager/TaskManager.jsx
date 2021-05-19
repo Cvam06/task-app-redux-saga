@@ -7,27 +7,13 @@ import {tasksAll} from '../../../constants';
 
 function TaskManager() {
 
-    const [tasks, setTasks] = useState([]);
-
-
-    const addTask = (data) => {
-        const task = new Task(
-            tasks.length + 1,
-            data.title,
-            data.description
-        )
-
-        setTasks([...tasks, task])
-        console.log(data)
-    }
-
     return (
         <Row>
             <Col>
-                <TaskForm addTask = {addTask}></TaskForm>
+                <TaskForm ></TaskForm>
             </Col>
             <Col>
-                <TaskList tasks = {tasks}></TaskList>
+                <TaskList ></TaskList>
             </Col>
         </Row>
     )

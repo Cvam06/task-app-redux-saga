@@ -2,6 +2,7 @@ import './App.css';
 import Header from "./components/shared/Header/Header.jsx"
 import Footer from "./components/shared/Footer/Footer.jsx"
 import TaskManager from "./components/shared/TaskManager/TaskManager.jsx";
+import Login from "./components/shared/Login/Login.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <div className="row">
         <div className="col">
           <TaskManager />
+          {/* <Login /> */}
         </div>
       </div>
 
