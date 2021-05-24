@@ -1,0 +1,49 @@
+{
+  "tasks":[
+    {
+    "id":1,
+    "title":"Learn Json",
+    "description":"This is learn JSON",
+    "completed":false,
+    "date":"2020-08-24"
+    },
+    {
+      "id":2,
+      "title":"Learn Redux",
+      "description":"This is learn Redux",
+      "completed":false,
+      "date":"2020-08-24"
+    },
+    {
+      "id":3,
+      "title":"Learn React",
+      "description":"This is learn React",
+      "completed":false,
+      "date":"2020-08-24"
+    },
+    {
+      "id":4,
+      "title":"Learn Saga",
+      "description":"This is learn Saga",
+      "completed":false,
+      "date":"2020-08-24"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
